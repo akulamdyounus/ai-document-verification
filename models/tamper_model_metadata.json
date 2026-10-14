@@ -1,0 +1,152 @@
+{
+  "model_name": "tamper_risk_calibrated_gradient_boosting_v1",
+  "algorithm": "CalibratedClassifierCV(GradientBoostingClassifier(n_estimators=100, max_depth=4))",
+  "feature_count": 24,
+  "feature_names": [
+    "ela_mean_error",
+    "ela_std_error",
+    "ela_max_error",
+    "ela_anomaly_pixel_ratio",
+    "noise_mean_laplacian_var",
+    "noise_median_var",
+    "noise_min_var",
+    "noise_flat_blocks_ratio",
+    "sharpness_laplacian_var",
+    "sharpness_is_defocused",
+    "splicing_patch_corners",
+    "copy_move_clustered_vectors",
+    "copy_move_candidate_matches",
+    "copy_move_total_keypoints",
+    "has_editing_software_signature",
+    "pdf_timestamp_delta_days",
+    "pdf_timestamp_anomaly_flag",
+    "pdf_embedded_fonts_count",
+    "pdf_has_digital_text",
+    "date_chronology_issues_count",
+    "invoice_math_discrepancy",
+    "identifier_syntax_valid",
+    "bank_running_balance_discrepancies",
+    "bank_identity_conflict_flag"
+  ],
+  "feature_importances": [
+    {
+      "feature": "ela_max_error",
+      "importance": 0.2897
+    },
+    {
+      "feature": "invoice_math_discrepancy",
+      "importance": 0.141
+    },
+    {
+      "feature": "pdf_timestamp_anomaly_flag",
+      "importance": 0.1352
+    },
+    {
+      "feature": "copy_move_clustered_vectors",
+      "importance": 0.1289
+    },
+    {
+      "feature": "date_chronology_issues_count",
+      "importance": 0.1019
+    },
+    {
+      "feature": "bank_identity_conflict_flag",
+      "importance": 0.08
+    },
+    {
+      "feature": "bank_running_balance_discrepancies",
+      "importance": 0.0748
+    },
+    {
+      "feature": "noise_flat_blocks_ratio",
+      "importance": 0.0104
+    },
+    {
+      "feature": "pdf_timestamp_delta_days",
+      "importance": 0.0084
+    },
+    {
+      "feature": "copy_move_total_keypoints",
+      "importance": 0.006
+    },
+    {
+      "feature": "sharpness_laplacian_var",
+      "importance": 0.0049
+    },
+    {
+      "feature": "noise_mean_laplacian_var",
+      "importance": 0.0041
+    },
+    {
+      "feature": "ela_mean_error",
+      "importance": 0.0034
+    },
+    {
+      "feature": "noise_median_var",
+      "importance": 0.0026
+    },
+    {
+      "feature": "ela_std_error",
+      "importance": 0.0026
+    },
+    {
+      "feature": "copy_move_candidate_matches",
+      "importance": 0.0024
+    },
+    {
+      "feature": "noise_min_var",
+      "importance": 0.0016
+    },
+    {
+      "feature": "splicing_patch_corners",
+      "importance": 0.0009
+    },
+    {
+      "feature": "ela_anomaly_pixel_ratio",
+      "importance": 0.0006
+    },
+    {
+      "feature": "has_editing_software_signature",
+      "importance": 0.0003
+    },
+    {
+      "feature": "sharpness_is_defocused",
+      "importance": 0.0001
+    },
+    {
+      "feature": "pdf_has_digital_text",
+      "importance": 0.0001
+    },
+    {
+      "feature": "pdf_embedded_fonts_count",
+      "importance": 0.0001
+    },
+    {
+      "feature": "identifier_syntax_valid",
+      "importance": 0.0
+    }
+  ],
+  "total_samples": 1400,
+  "train_samples": 1120,
+  "test_samples": 280,
+  "metrics": {
+    "accuracy": 0.9786,
+    "roc_auc": 0.9774,
+    "precision": 0.9926,
+    "recall": 0.964,
+    "f1_score": 0.9781,
+    "brier_score": 0.0222
+  },
+  "confusion_matrix": [
+    [
+      140,
+      1
+    ],
+    [
+      5,
+      134
+    ]
+  ],
+  "saved_path": "models\\tamper_risk_classifier_v1.joblib",
+  "trained_at": "2026-10-14T14:11:10.801848Z"
+}

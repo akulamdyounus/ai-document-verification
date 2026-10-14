@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ai-document-verifier-backend
+    runtime: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: ENVIRONMENT
+        value: production
+      - key: CORS_ORIGINS
+        value: "https://*.vercel.app,http://localhost:5173"
+      - key: MAX_FILE_SIZE_MB
+        value: 10
+    healthCheckPath: /api/health
